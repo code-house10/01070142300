@@ -1,12 +1,11 @@
-<html lang="ar" dir="rtl" style="--vh: 2.2px;"><head>
-<!-- Google Tag Manager -->
+<html lang="ar" dir="rtl" style="--vh: 2.2px;">
+<head>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5LKNC3FG');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شركة دريم ترانس لنقل الأثاث - خدمة نقل عفش احترافية بالقاهرة والجيزة</title>
     <meta name="description" content="دريم ترانس لنقل الأثاث، أفضل شركة نقل عفش في مدينة نصر، مصر الجديدة، التجمع الخامس، مدينتي، الرحاب، الشيخ زايد، المعادي، وحلوان. نقدم خدمات فك، تركيب، تغليف، ونقل آمن وسريع بأفضل الأسعار.">
@@ -1068,38 +1067,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        /* Floating Call Button - Left */
+        /* --- UPDATED FLOATING CALL BUTTON STYLES --- */
         .floating-call-btn-left {
             position: fixed;
-            left: 20px; /* Positioned on the left */
+            left: 20px; 
             bottom: 20px;
-            z-index: 1050; /* Ensure it's above other elements, including potential mobile menu overlay */
-            display: flex;
-            align-items: center;
-            background-color: var(--primary-color); /* Using your primary color */
+            z-index: 1050; 
+            display: flex; 
+            align-items: center; 
+            background-color: var(--primary-color); 
             color: var(--white);
-            padding: 12px 18px;
-            border-radius: 50px; /* Circular/pill shape */
+            padding: 10px 15px; /* Base padding */
+            border-radius: 50px; 
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
-            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+            font-size: 1rem; /* Base font size for text elements within */
             text-decoration: none;
         }
 
-        .floating-call-btn-left i {
-            margin-left: 10px; /* Space between icon and text (for RTL) */
-            font-size: 1.3rem;
-            animation: pulse-call-animation 2s infinite ease-in-out; /* Added animation */
-        }
-
-        .floating-call-btn-left span {
-            font-weight: 700;
-        }
-
         .floating-call-btn-left:hover {
-            transform: translateY(-3px) scale(1.03); /* Enhanced hover effect */
+            transform: translateY(-3px) scale(1.03); 
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            background-color: #A52A2A; /* Slightly darker shade of your primary color on hover */
+            background-color: #A52A2A; /* Slightly darker shade */
+        }
+
+        .floating-btn-icon { /* Styles for the <i> icon */
+            font-size: 1.2rem; 
+            animation: pulse-call-animation 2s infinite ease-in-out;
+            /* In RTL, this icon is on the right of the text span that follows it in HTML. */
+            /* No margin needed here by default, space handled by .floating-btn-text's margin-right. */
+        }
+
+        .floating-btn-text { /* Styles for the main text span */
+            font-weight: 700;
+            margin-right: 8px; /* Space from the icon (which is to its right in HTML, so right-most in RTL flow) */
+        }
+
+        .floating-btn-action-text-part { /* Styles for the "(إتصل الأن)" part */
+            /* Default display: inline. Space between number and this text is handled by a space in HTML. */
         }
 
         @keyframes pulse-call-animation {
@@ -1109,41 +1114,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         /* Responsive adjustments for the floating button */
-        @media (max-width: 768px) {
+        @media (max-width: 768px) { /* Tablet and smaller */
             .floating-call-btn-left {
-                padding: 10px 15px;
-                font-size: 1rem;
+                padding: 8px 12px;
+                font-size: 0.9rem; 
                 left: 15px;
                 bottom: 15px;
             }
-            .floating-call-btn-left i {
-                 font-size: 1.2rem;
-                 margin-left: 8px;
+            .floating-btn-icon {
+                 font-size: 1.1rem; 
             }
-             .floating-call-btn-left span {
-                font-size: 0.9rem; /* Optionally slightly smaller text on mobile */
+            .floating-btn-text {
+                margin-right: 6px; 
             }
         }
-         @media (max-width: 480px) {
-            .floating-call-btn-left span {
-                display: none; /* Hide text on very small screens, show only icon */
-            }
-             .floating-call-btn-left i {
-                 margin-left: 0;
+
+        @media (max-width: 480px) { /* Small mobile */
+            .floating-btn-action-text-part { 
+                display: none; /* Hide "(إتصل الأن)" */
             }
             .floating-call-btn-left {
-                padding: 12px; /* Adjust padding for icon-only button */
+                padding: 8px 10px; 
             }
+            /* .floating-btn-text will now only contain the number. */
+            /* Its font-size is 0.9rem from the 768px media query. */
         }
+        /* --- END OF UPDATED FLOATING CALL BUTTON STYLES --- */
+
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LKNC3FG"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-    <div class="overlay"></div>
+<div class="overlay"></div>
     
     <header>
         <div class="top-header">
@@ -1168,7 +1171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
                 <div class="header-content">
                     <a href="#" class="logo">
-                        <img src="https://raw.githubusercontent.com/code-house10/logos/refs/heads/main/dream2.png" alt="شعار شركة دريم ترانس لنقل الأثاث">
+                        <img src="https://raw.githubusercontent.com/code-house10/logos/refs/heads/main/dream2.png" alt="شعار شركة دريم ترانس لنقل الأثاث" onerror="this.onerror=null;this.src='https://placehold.co/150x50/8B0000/FFFFFF?text=Logo+Dream';">
                         دريم ترانس لنقل الأثاث
                     </a>
                     <div class="mobile-menu-btn">
@@ -1183,7 +1186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="#services">الخدمات</a></li>
                         <li><a href="#areas">مناطق الخدمة</a></li>
                         <li><a href="#blog">المدونة</a></li>
-                        <li><a href="#footer">اتصل بنا</a></li>
+                        <li><a href="tel:01070142300">اتصل بنا</a></li>
                     </ul>
                 </div>
             </div>
@@ -1209,7 +1212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h1>نقل عفش آمن وسريع لمصر الجديدة ومدينتي</h1>
                     <p>نوفر خدمات الفك والتركيب والتغليف والنقل بأحدث المعدات وأفضل الكوادر المدربة. نصلك أينما كنت في الرحاب والشيخ زايد أيضًا.</p>
                     <div class="hero-buttons">
-                        <a href="#contact-form" class="btn btn-primary">اطلب عرض سعر مجاني</a>
+                        <a href="tel:01070142300" class="btn btn-primary">اطلب عرض سعر مجاني</a>
                         <a href="#why-choose-us" class="btn btn-secondary">لماذا تختارنا؟</a>
                     </div>
                 </div>
@@ -1222,7 +1225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p>نقدم أفضل الأسعار مع ضمان جودة الخدمة وسلامة منقولاتك من الباب إلى الباب. خدمة نقل عفش للمهندسين والدقي والعجوزة.</p>
                     <div class="hero-buttons">
                         <a href="https://wa.me/201070142300" class="btn btn-primary" style="background-color: var(--green); border-color: var(--green);"><i class="fab fa-whatsapp" style="margin-left: 8px;"></i>تواصل عبر واتساب</a>
-                        <a href="#footer" class="btn btn-secondary">معلومات الاتصال</a>
+                        <a href="tel:01070142300" class="btn btn-secondary">معلومات الاتصال</a>
                     </div>
                 </div>
             </div>
@@ -1287,7 +1290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h2>من نحن؟ شركة دريم ترانس لخدمات نقل الأثاث المتكاملة</h2>
                     <p>شركة دريم ترانس لنقل الأثاث هي رائدة شركات نقل العفش في مصر، بخبرة تمتد لسنوات طويلة في تقديم خدمات نقل أثاث شاملة وموثوقة لعملائنا الكرام في جميع أنحاء القاهرة والجيزة، بما في ذلك مدينة نصر، التجمع الخامس، مصر الجديدة، مدينتي، الرحاب، الشيخ زايد، المعادي، حلوان، المهندسين، الدقي، العجوزة، وغيرها من المناطق.</p>
                     <p>نحن نؤمن بأن نقل الأثاث ليس مجرد خدمة، بل هو مسؤولية كبيرة تتطلب الاهتمام بكل التفاصيل لضمان سلامة منقولاتك وممتلكاتك الثمينة. لذلك، نحرص على استخدام أحدث المعدات وأفضل مواد التغليف وفريق عمل مدرب بعناية.</p>
-                    <a href="#footer" class="btn btn-primary">اتصل بنا للاستشارة المجانية</a>
+                    <a href="tel:01070142300" class="btn btn-primary">اتصل بنا للاستشارة المجانية</a>
                 </div>
                 <div class="why-choose-cards">
                     <div class="why-choose-card">
@@ -1323,12 +1326,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/127531800_196298038698252_8716161209163790471_n.jpg" alt="تغليف الأثاث باحترافية">
+                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/127531800_196298038698252_8716161209163790471_n.jpg" alt="تغليف الأثاث باحترافية" onerror="this.onerror=null;this.src='https://placehold.co/300x220/f5f5f5/333333?text=تغليف+الأثاث';">
                     </div>
                     <div class="service-content">
                         <h3>تغليف الأثاث باحترافية</h3>
                         <p>نستخدم أجود مواد التغليف (بابلز، كرتون، استرتش) لحماية كل قطعة أثاث وضمان وصولها سليمة إلى وجهتها الجديدة في مدينة نصر أو أي مكان آخر.</p>
-                        <a href="#footer" class="service-btn">
+                        <a href="tel:01070142300" class="service-btn">
                             <i class="fas fa-arrow-left"></i>
                             اطلب خدمة التغليف
                         </a>
@@ -1336,12 +1339,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128427058_109989410964682_5769937243968419869_n.jpg" alt="نقل وفك وتركيب الأثاث">
+                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128427058_109989410964682_5769937243968419869_n.jpg" alt="نقل وفك وتركيب الأثاث" onerror="this.onerror=null;this.src='https://placehold.co/300x220/f5f5f5/333333?text=فك+وتركيب';">
                     </div>
                     <div class="service-content">
                         <h3>فك وتركيب الأثاث بدقة</h3>
                         <p>فريق من النجارين المحترفين لفك وتركيب جميع أنواع الأثاث (غرف نوم، مطابخ، مكيفات، ستائر) بحرفية عالية في التجمع الخامس ومصر الجديدة.</p>
-                        <a href="#footer" class="service-btn">
+                        <a href="tel:01070142300" class="service-btn">
                             <i class="fas fa-arrow-left"></i>
                             استفسر عن الفك والتركيب
                         </a>
@@ -1349,12 +1352,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/131083753_207713207556735_3587017253538319894_n.jpg" alt="سيارات نقل عفش مجهزة">
+                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/131083753_207713207556735_3587017253538319894_n.jpg" alt="سيارات نقل عفش مجهزة" onerror="this.onerror=null;this.src='https://placehold.co/300x220/f5f5f5/333333?text=سيارات+نقل';">
                     </div>
                     <div class="service-content">
                         <h3>سيارات نقل عفش مجهزة</h3>
                         <p>أسطول من سيارات النقل المغلقة والمجهزة بأحجام مختلفة لنقل أثاثك بأمان وسرعة إلى مدينتي، الرحاب، الشيخ زايد، وكل أنحاء القاهرة.</p>
-                        <a href="#footer" class="service-btn">
+                        <a href="tel:01070142300" class="service-btn">
                             <i class="fas fa-arrow-left"></i>
                             احجز سيارة نقل
                         </a>
@@ -1362,12 +1365,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                  <div class="service-card">
                     <div class="service-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128948131_104728608157038_6329061589749272507_n.jpg" alt="تخزين الأثاث في مستودعات آمنة">
+                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128948131_104728608157038_6329061589749272507_n.jpg" alt="تخزين الأثاث في مستودعات آمنة" onerror="this.onerror=null;this.src='https://placehold.co/300x220/f5f5f5/333333?text=تخزين+آمن';">
                     </div>
                     <div class="service-content">
                         <h3>تخزين الأثاث الآمن</h3>
                         <p>نوفر خدمة تخزين الأثاث في مستودعات آمنة ومجهزة للحفاظ على ممتلكاتك لفترات قصيرة أو طويلة حسب حاجتك في المعادي وحلوان.</p>
-                        <a href="#footer" class="service-btn">
+                        <a href="tel:01070142300" class="service-btn">
                             <i class="fas fa-arrow-left"></i>
                             المزيد عن التخزين
                         </a>
@@ -1385,35 +1388,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="areas-grid">
                 <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images2/refs/heads/main/122.jpg" alt="نقل عفش مدينة نصر"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images2/refs/heads/main/122.jpg" alt="نقل عفش مدينة نصر" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=مدينة+نصر';"></div>
                     <div class="area-content"><h3>نقل عفش مدينة نصر</h3><p>خدمة نقل سريعة وآمنة لجميع أحياء مدينة نصر.</p></div>
                 </div>
                 <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1213.jpg" alt="نقل عفش مصر الجديدة"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1213.jpg" alt="نقل عفش مصر الجديدة" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=مصر+الجديدة';"></div>
                     <div class="area-content"><h3>نقل عفش مصر الجديدة</h3><p>خبرة واحترافية في نقل الأثاث بمصر الجديدة.</p></div>
                 </div>
                 <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120773070_397978604938443_354909630847704936_n.jpg" alt="نقل عفش التجمع الخامس"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120773070_397978604938443_354909630847704936_n.jpg" alt="نقل عفش التجمع الخامس" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=التجمع+الخامس';"></div>
                     <div class="area-content"><h3>نقل عفش التجمع الخامس</h3><p>نقل وفك وتركيب لجميع أنواع الأثاث بالتجمع.</p></div>
                 </div>
                 <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/126944711_122190526366863_4346383028104921432_n.jpg" alt="نقل عفش مدينتي والرحاب"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/126944711_122190526366863_4346383028104921432_n.jpg" alt="نقل عفش مدينتي والرحاب" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=مدينتي+والرحاب';"></div>
                     <div class="area-content"><h3>نقل عفش مدينتي والرحاب</h3><p>أفضل خدمة نقل أثاث لساكني مدينتي والرحاب.</p></div>
                 </div>
                  <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/127531800_196298038698252_8716161209163790471_n.jpg" alt="نقل عفش الشيخ زايد وأكتوبر"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/127531800_196298038698252_8716161209163790471_n.jpg" alt="نقل عفش الشيخ زايد وأكتوبر" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=الشيخ+زايد';"></div>
                     <div class="area-content"><h3>نقل عفش الشيخ زايد وأكتوبر</h3><p>تغطية شاملة لمدينة الشيخ زايد و6 أكتوبر.</p></div>
                 </div>
                  <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128427058_109989410964682_5769937243968419869_n.jpg" alt="نقل عفش المعادي وحلوان"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128427058_109989410964682_5769937243968419869_n.jpg" alt="نقل عفش المعادي وحلوان" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=المعادي+وحلوان';"></div>
                     <div class="area-content"><h3>نقل عفش المعادي وحلوان</h3><p>نقل آمن وموثوق لأثاثك في المعادي وحلوان.</p></div>
                 </div>
                 <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/131083753_207713207556735_3587017253538319894_n.jpg" alt="نقل عفش المهندسين والدقي"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/131083753_207713207556735_3587017253538319894_n.jpg" alt="نقل عفش المهندسين والدقي" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=المهندسين+والدقي';"></div>
                     <div class="area-content"><h3>نقل عفش المهندسين والدقي</h3><p>خدمة احترافية لنقل الأثاث بالمهندسين والدقي.</p></div>
                 </div>
                  <div class="area-card">
-                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128948131_104728608157038_6329061589749272507_n.jpg" alt="ومناطق أخرى كثيرة"></div>
+                    <div class="area-img"><img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/128948131_104728608157038_6329061589749272507_n.jpg" alt="ومناطق أخرى كثيرة" onerror="this.onerror=null;this.src='https://placehold.co/280x180/ffffff/333333?text=مناطق+أخرى';"></div>
                     <div class="area-content"><h3>ومناطق أخرى كثيرة</h3><p>نخدم العجوزة، شيراتون، النزهة، جسر السويس، المقطم، والعبور. اتصل بنا!</p></div>
                 </div>
             </div>
@@ -1485,7 +1488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="blog-grid">
                 <div class="blog-card">
                     <div class="blog-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images2/refs/heads/main/10000729041.jpg" alt="نصائح للحفاظ على الأثاث">
+                        <img src="https://raw.githubusercontent.com/code-house10/images2/refs/heads/main/10000729041.jpg" alt="نصائح للحفاظ على الأثاث" onerror="this.onerror=null;this.src='https://placehold.co/280x200/f5f5f5/333333?text=نصائح+هامة';">
                     </div>
                     <div class="blog-content">
                         <div class="blog-date">15 مايو 2025</div>
@@ -1499,7 +1502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="blog-card">
                     <div class="blog-img">
-                         <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120773070_397978604938443_354909630847704936_n.jpg" alt="أفضل طرق تغليف الأثاث">
+                         <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/120773070_397978604938443_354909630847704936_n.jpg" alt="أفضل طرق تغليف الأثاث" onerror="this.onerror=null;this.src='https://placehold.co/280x200/f5f5f5/333333?text=تغليف+الأثاث';">
                     </div>
                     <div class="blog-content">
                         <div class="blog-date">10 مايو 2025</div>
@@ -1513,7 +1516,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="blog-card">
                     <div class="blog-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1213.jpg" alt="اختيار شركة نقل أثاث">
+                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/1213.jpg" alt="اختيار شركة نقل أثاث" onerror="this.onerror=null;this.src='https://placehold.co/280x200/f5f5f5/333333?text=اختيار+الشركة';">
                     </div>
                     <div class="blog-content">
                         <div class="blog-date">05 مايو 2025</div>
@@ -1527,7 +1530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="blog-card">
                     <div class="blog-img">
-                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/126944711_122190526366863_4346383028104921432_n.jpg" alt="قائمة مهام قبل الانتقال">
+                        <img src="https://raw.githubusercontent.com/code-house10/images/refs/heads/main/126944711_122190526366863_4346383028104921432_n.jpg" alt="قائمة مهام قبل الانتقال" onerror="this.onerror=null;this.src='https://placehold.co/280x200/f5f5f5/333333?text=قائمة+المهام';">
                     </div>
                     <div class="blog-content">
                         <div class="blog-date">01 مايو 2025</div>
@@ -1548,7 +1551,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="footer-content">
                 <div class="footer-column footer-about">
                     <a href="#" class="footer-logo">
-                         <img src="https://raw.githubusercontent.com/code-house10/logos/refs/heads/main/dream2.png" alt="شعار شركة دريم ترانس لنقل الأثاث" style="filter: brightness(0) invert(1);"> دريم ترانس لنقل الأثاث
+                         <img src="https://raw.githubusercontent.com/code-house10/logos/refs/heads/main/dream2.png" alt="شعار شركة دريم ترانس لنقل الأثاث" style="filter: brightness(0) invert(1);" onerror="this.onerror=null;this.src='https://placehold.co/150x40/1a365d/FFFFFF?text=Logo+Dream';"> دريم ترانس لنقل الأثاث
                     </a>
                     <p>شركة دريم ترانس، شريكك الموثوق لنقل الأثاث والعفش في جميع أنحاء القاهرة والجيزة. نضمن لك خدمة احترافية، أمان تام لمنقولاتك، وأسعار تنافسية. اتصل بنا اليوم لتجربة نقل مريحة وخالية من القلق.</p>
                     <div class="footer-social">
@@ -1614,10 +1617,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <a href="tel:01070142300" class="floating-call-btn-left">
-        <i class="fas fa-phone-alt"></i>
-        <span style="margin-right: 8px;">اتصل الآن</span>
-    </a>
+   <a href="tel:01070142300" class="floating-call-btn-left">
+    <i class="fa fa-phone floating-btn-icon"></i>
+    <span class="floating-btn-text">
+        01070142300 <span class="floating-btn-action-text-part">(إتصل الأن)</span>
+    </span>
+</a>
 
     <script>
         // Mobile Menu Toggle
@@ -1792,4 +1797,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.addEventListener('resize', setViewportHeight);
 
     </script>
-</body></html>
+</body>
+</html>
